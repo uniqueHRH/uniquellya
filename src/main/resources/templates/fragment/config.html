@@ -1,0 +1,54 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<th:block th:fragment="configFragment">
+
+    <th:block layout:fragment="css"></th:block>
+
+    <link th:href="@{/images/favicon.png}" rel="icon">
+
+    <script th:src="@{/js/jquery/jquery-1.11.3.min.js}"></script>
+    <script th:src="@{/js/bootstrap/bootstrap-3.3.6.min.js}"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/google-icons.css}" >
+
+    <!-- bootstrap + propeller -->
+    <link rel="stylesheet" th:href="@{/css/bootstrap/bootstrap.css}" >
+    <link rel="stylesheet" th:href="@{/css/propeller/propeller.css}" >
+    <link rel="stylesheet" th:href="@{/css/propeller/propeller-theme.css}" >
+    <link rel="stylesheet" th:href="@{/css/propeller/propeller-admin.css}" >
+    <link rel="stylesheet" th:href="@{/css/propeller/tab.css}" >
+    <link rel="stylesheet" th:href="@{/css/propeller/pmd-datatable.css}" >
+
+    <!-- datetimepicker -->
+    <link rel="stylesheet" th:href="@{/css/bootstrap/bootstrap-datetimepicker.css}" >
+    <link rel="stylesheet" th:href="@{/css/propeller/pmd-datetimepicker.css}" >
+    <script type="text/javascript" th:src="@{/js/bootstrap-datetimepicker.js}"></script>
+
+    <!-- jquery scroll bar -->
+    <script th:src="@{/js/jquery/jquery.mCustomScrollbar.js}"></script>
+    <link rel="stylesheet" th:href="@{/css/jquery.mCustomScrollbar.css}" >
+
+    <script th:src="@{/js/propeller/propeller.js}"></script>
+    <script th:src="@{/js/propeller/global.js}"></script>
+
+    <link rel="stylesheet" th:href="@{/css/common/common.css}" >
+    <script th:src="@{/js/common/common.js}"></script>
+    <th:block layout:fragment="script"></th:block>
+
+    <!-- vue.js -->
+    <script th:src="@{/js/vue.js}"></script>
+    <script th:src="@{/js/vue-router.js}"></script>
+    <script th:src="@{/js/jquery/jquery.validate-1.19.2.js}"></script>
+
+    <!-- chart.js -->
+    <script th:src="@{/js/loader.js}"></script>
+
+    <!-- Resources -->
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/plugins/wordCloud.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/dark.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+
+</th:block>
+</html>

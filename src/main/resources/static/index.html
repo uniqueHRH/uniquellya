@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:replace="fragment/config :: configFragment" />
+    <title>sendMail</title>
+</head>
+<body>
+    <form action="/sendMail" method="POST">
+        <div>
+            <input type="text" name="name">
+        </div>
+        <div>
+            <input type="text" name="email">
+        </div>
+        <button type="submit">send</button>
+    </form>
+</body>
+</html>

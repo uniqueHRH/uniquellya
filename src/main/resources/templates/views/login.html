@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:replace="fragment/config :: configFragment" />
+</head>
+<body class="body-custom">
+<div class="logincard">
+    <div class="pmd-card card-default pmd-z-depth">
+        <div class="login-card">
+            <!--				<form action="/login/loginCheck" method="post">-->
+            <form action="/login" method="post">
+                <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+                <div class="pmd-card-title card-header-border text-center">
+                    <h1 class="loginlogo">
+                        <img th:src="@{/images/favicon.png}" width="265px" height="90px">
+                    </h1>
+                    <h3>Sign In <span>with <strong>PAYHADA</strong></span></h3>
+                </div>
+
+
+                <div class="pmd-card-body">
+                    <div class="alert alert-success" role="alert"> Oh snap! Change a few things up and try submitting again. </div>
+                    <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                        <label for="inputError1" class="control-label pmd-input-group-label">Username</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="material-icons md-dark pmd-sm">perm_identity</i></div>
+                            <input type="text" name="id" 	class="form-control" id="id"><span class="pmd-textfield-focused"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                        <label for="inputError1" class="control-label pmd-input-group-label">Password</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="material-icons md-dark pmd-sm">lock_outline</i></div>
+                            <input type="password" name="pwd" class="form-control" id="pwd"><span class="pmd-textfield-focused"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="pmd-card-footer card-footer-no-border card-footer-p16 text-center">
+                    <br>
+                    <button type="submit" class="btn pmd-ripple-effect btn-primary btn-block">Login</button>
+                    <p> </p>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

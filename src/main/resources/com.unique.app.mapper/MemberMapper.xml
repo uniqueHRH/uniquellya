@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace = "com.unique.app.user.dao.MemberDAO">
+    <select id = "findLoginInfo" resultType="com.unique.app.user.dto.MemberDTO">
+        select seq, id, pw, name, reg_dt, leave_dt from member
+        where id = #{id}
+          AND pw = #{pw}
+    </select>
+</mapper>
