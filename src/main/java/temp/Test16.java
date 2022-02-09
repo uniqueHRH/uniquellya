@@ -2,68 +2,67 @@ package temp;
 
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
-
 /**
- * hashMap
+ * Thread
  */
 @Slf4j
 public class Test16 {
-    
-    static HashMap phoneBook    = new HashMap();
-    
+
     public static void main(String[] args) {
-        addPhoneNo("친구", "홍길동", "010-1234-1234");
-        addPhoneNo("친구", "김나비", "010-2345-2686");
-        addPhoneNo("회사", "이공룡", "010-3456-7454");
-        addPhoneNo("회사", "김갑자", "010-6545-5673");
-        addPhoneNo("회사", "장순자", "010-7465-2654");
-        addPhoneNo("회사", "홍나비", "010-3142-5674");
-        addPhoneNo("회사", "김순이", "010-6475-5856");
-        addPhoneNo("회사", "박수진", "010-6456-6245");
-        addPhoneNo("기타", "이웃집", "010-8967-4563");
-        addPhoneNo("기타", "세탁실", "010-8563-2352");
-        addPhoneNo("기타", "집주인", "010-3458-3454");
+        ThreadEx1_1 thread1    = new ThreadEx1_1();
 
-        printList();
+        /**
+         * Runnable 인터페이스를 구현한 경우,
+         * Runnable 인터페이스를 구현한 클래스의 인스턴스 생성
+         * -> 인스턴스를 Thrad 클래스 생성자의 매개변수로 전달해야함
+         */
+        Runnable runnable       = new ThreadEx1_2();
+        Thread thread2          = new Thread(runnable);
+//      Thread thread2          = new Thread(new ThreadEx1_2());   -> 위 두줄을 한줄로 정리
+
+        /**
+         * start() 를 호출해야면 쓰레드 실행
+         * 하나의 쓰레드에서 start()가 한 번만 호출 가능 -> 재실행 불가
+         * -> 재실행이 필요하다면 아래와 같이 새로운 쓰레드를 생성하여 실행해야 한다
+         * -> ThreadEx1_1 thread1   = new ThreadEx1_1();
+         * thread1.start();
+         * thread1 = new ThreadEx1_1();
+         * thread1.start();
+         * 
+         * 새로운 쓰레드 생성없이 재실행할 경우, IllegalThreadStateException 발생
+         * thread1.start();
+         * thread1.start();   -> IllegalThreadStateException 예외
+         */
+
+        /**
+         * run() 이 아니라 start() 호출인 이유
+         * run()    : 쓰레드를 실행시키는 것이 아니라 클레스에 선언된 메소드를 호출할 뿐
+         * start()  : 쓰레드가 작업을 실행하는데 필요한 호출스택(call stack) 을 생성한 다음 run() 호출
+         *            -> 생성된 호출스택에 run() 이 첫번째로 올라가도록 한다
+         */
+        thread1.start();
+        thread2.start();
     }
+}
 
-    static void addPhoneNo(String groupName, String name, String tel) {
-        addGroup(groupName);
-
-        HashMap group   = (HashMap) phoneBook.get(groupName);
-        group.put(tel, name);
-    }
-
-    static void addGroup(String groupName) {
-        if(!phoneBook.containsKey(groupName)) {
-            phoneBook.put(groupName, new HashMap());
-        }
-    }
-
-    static void addPhoneNo(String name, String tel) {
-        addPhoneNo("기타", name, tel);
-    }
-
-    static void printList() {
-        Iterator iterator   = phoneBook.entrySet().iterator();
-
-        while(iterator.hasNext()) {
-            Map.Entry e     = (Map.Entry) iterator.next();
-            Set subSet      = ((HashMap) e.getValue()).entrySet();
-            Iterator subIt  = subSet.iterator();
-
-            log.debug(" * " + e.getKey() + " [ " + subSet.size() + " ]");
-
-            while(subIt.hasNext()) {
-                Map.Entry subE  = (Map.Entry) subIt.next();
-                String telNo    = (String) subE.getKey();
-                String name     = (String) subE.getValue();
-                log.debug(name + " " + telNo);
-            }
+@Slf4j
+class ThreadEx1_1 extends Thread {
+    public void run() {
+        for(int i=0; i<5; i++) {
+            log.debug("ThreadEx1_1   ===" + getName());
         }
     }
 }
+
+@Slf4j
+class ThreadEx1_2 implements Runnable {
+
+    @Override
+    public void run() {
+        for(int i=0; i<5; i++) {
+            // Thread.currentThread()   -> 현재 실행중인 thread 반환
+            log.debug("currentThread === " + Thread.currentThread());
+        }
+    }
+}
+
