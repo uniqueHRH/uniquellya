@@ -1,5 +1,7 @@
 package com.unique.app.config;
 
+import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -8,6 +10,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 
 @Configuration          // config 파일 선언
 @EnableWebSecurity      // security 사용 선언
+@AllArgsConstructor
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private CumstomAuthenticationProvider authenticationProvider;
 

@@ -11,10 +11,10 @@
 | 내부클래스 (Inner class)      | test10 - test12 |
 | 익명클래스 (Anoymous class)   | test13 - test14 |
 | 해쉬맵 (HashMap)              | test15          |
-| 쓰레드 (Thread)               | test16 - test34 |
-| 제네릭 (Generic)              | test25 - test28 |
-| 열거형 (Enum)                 | test29-test32   |
-| 어노테이션 (Annotation)       | test33          |
+| 쓰레드 (Thread)               | test16 - test40 |
+| 제네릭 (Generic)              | test41 - test44 |
+| 열거형 (Enum)                 | test45-test48   |
+| 어노테이션 (Annotation)       | test49          |
 |                               |                 |
 
 
