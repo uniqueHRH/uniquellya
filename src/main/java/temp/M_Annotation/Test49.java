@@ -22,7 +22,7 @@ public class Test49 {
          * 이 객체를 참조할 때 'class명.class' 로 사용
          */
 //      Test33의 Class 객체 획득
-        Class<Test33> cls   = Test33.class;
+        Class<Test49> cls   = Test49.class;
 
         TestInfo anno   = (TestInfo)cls.getAnnotation(TestInfo.class);
         log.debug("anno.testedBy() === " + anno.testedBy());

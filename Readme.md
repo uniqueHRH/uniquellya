@@ -15,7 +15,8 @@
 | 제네릭 (Generic)              | test41 - test44 |
 | 열거형 (Enum)                 | test45-test48   |
 | 어노테이션 (Annotation)       | test49          |
-|                               |                 |
+| 람다 (Lambda)                 | test50 - test52 |
+| 스트림 (Stream)               | test53 - test57 |
 
 
 
