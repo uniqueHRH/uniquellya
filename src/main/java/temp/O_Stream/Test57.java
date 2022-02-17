@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 
 /**
  * Stream
- * flatMap()    : 배열 Stream
+ * 중간연산 - [ flatMap() ]    : 배열 Stream
  */
 @Slf4j
 public class Test57 {

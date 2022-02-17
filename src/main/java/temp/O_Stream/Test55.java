@@ -7,6 +7,7 @@ import java.util.stream.Stream;
 
 /**
  * Stream
+ * 중간연산
  * map()    : 원하는 필드만 뽑아내거나 특정 형태로 변환
  * peek()   : 연산과 연 사이에 바르게 처리되었는지 체크
  */

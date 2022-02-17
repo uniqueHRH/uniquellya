@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 /**
  * Stream
- * [ IntSummaryStatistics ]
+ * 중간연산 - [ IntSummaryStatistics ]
  * sum, average 와 같은 연산을 함께 수행하기 위해서는 Stream 객체를 여러개 만들어야 한다
  * 이럴 때 사용할 수 있는 메소드 -> 동시 사용 가능
  */
