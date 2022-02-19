@@ -24,8 +24,8 @@ public class Test23 {
          */
         thread2.setPriority(7);
 
-        log.debug("Priority of thread1 === " + thread1.getPriority());
-        log.debug("Priority of thread2 === " + thread2.getPriority());
+        System.out.println("Priority of thread1 === " + thread1.getPriority());
+        System.out.println("Priority of thread2 === " + thread2.getPriority());
 
         thread1.start();
         thread2.start();

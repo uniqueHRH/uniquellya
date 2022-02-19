@@ -18,11 +18,11 @@ public class Test51 {
         Function<String, String>    h   = f.andThen(g);
         Function<Integer, Integer>  h2  = f.compose(g);
 
-        log.debug("h.apply('FE') === " + h.apply("FE"));
-        log.debug("h2.apply(2) === " + h2.apply(2));
+        System.out.println("h.apply('FE') === " + h.apply("FE"));
+        System.out.println("h2.apply(2) === " + h2.apply(2));
 
         Function<String, String>    f2  = x -> x;   // 항등함수 (identity function)
-        log.debug("f2.apply('AAA') === " + f2.apply("AAA"));    // AAA가 그대로 출력됨
+        System.out.println("f2.apply('AAA') === " + f2.apply("AAA"));    // AAA가 그대로 출력됨
 
         Predicate<Integer>  p       = i -> i < 100;
         Predicate<Integer>  q       = i -> i < 200;
@@ -30,7 +30,7 @@ public class Test51 {
         Predicate<Integer>  notP    = p.negate();   // i >= 100
 
         Predicate<Integer> all      = notP.and(q.or(r));
-        log.debug("all.test(150) === " + all.test(150));    // true
+        System.out.println("all.test(150) === " + all.test(150));    // true
 
         String str1 = "abc";
         String str2 = "abc";
@@ -38,6 +38,6 @@ public class Test51 {
         // str1과 str2가 같은지 비교한 결과를 반환
         Predicate<String>   p2      = Predicate.isEqual(str1);
         boolean             result  = p2.test(str2);
-        log.debug("result === " + result);
+        System.out.println("result === " + result);
     }
 }

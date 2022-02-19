@@ -18,10 +18,10 @@ public class Test28 {
         t1.start();
 
         String input    = JOptionPane.showInputDialog(("아무 값이나 입력하세요"));
-        log.debug("입력값은 [ " + input + " ] 입니다");
+        System.out.println("입력값은 [ " + input + " ] 입니다");
         t1.interrupt(); // interrupt()를 호출하면, interrupted 상태가 true 로 전환
-        log.debug("isInterrupted() === " + t1.isInterrupted());
-        log.debug("isInterrupted() === " + t1.isInterrupted());
+        System.out.println("isInterrupted() === " + t1.isInterrupted());
+        System.out.println("isInterrupted() === " + t1.isInterrupted());
     }
 }
 
@@ -40,7 +40,7 @@ class Test28_1 extends Thread {
     public void run() {
         int i   = 10;
         while(i != 0 && !isInterrupted()) {
-            log.debug("i === " + i--);
+            System.out.println("i === " + i--);
 
 //            for(long x=0; x<2500000000L; x++);
 
@@ -50,6 +50,6 @@ class Test28_1 extends Thread {
                 interrupt();
             }
         }
-        log.debug("카운트가 종료되었습니다");
+        System.out.println("카운트가 종료되었습니다");
     }
 }

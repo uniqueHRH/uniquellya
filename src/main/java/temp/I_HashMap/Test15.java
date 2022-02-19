@@ -57,13 +57,13 @@ public class Test15 {
             Set subSet      = ((HashMap) e.getValue()).entrySet();
             Iterator subIt  = subSet.iterator();
 
-            log.debug(" * " + e.getKey() + " [ " + subSet.size() + " ]");
+            System.out.println(" * " + e.getKey() + " [ " + subSet.size() + " ]");
 
             while(subIt.hasNext()) {
                 Map.Entry subE  = (Map.Entry) subIt.next();
                 String telNo    = (String) subE.getKey();
                 String name     = (String) subE.getValue();
-                log.debug(name + " " + telNo);
+                System.out.println(name + " " + telNo);
             }
         }
     }

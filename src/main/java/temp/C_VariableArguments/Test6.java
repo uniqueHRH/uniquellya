@@ -14,9 +14,9 @@ public class Test6 {
         callToInteger(1,2,3,4,5,6,7);
     }
     static void call(String... str) {
-        log.debug("call ======" + str.toString());
+        System.out.println("call ======" + str.toString());
     }
     static void callToInteger(int... integer) {
-        log.debug("callToInteger ===== " + integer);
+        System.out.println("callToInteger ===== " + integer);
     }
 }

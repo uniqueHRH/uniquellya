@@ -17,7 +17,7 @@ public class Test20 {
         startTime           = System.currentTimeMillis();
 
         for(int i=0; i<300; i++) System.out.printf("%s", new String("="));
-        log.debug("소요시간1 === "+(System.currentTimeMillis() - Test20.startTime));
+        System.out.println("소요시간1 === "+(System.currentTimeMillis() - Test20.startTime));
     }
 }
 
@@ -25,7 +25,7 @@ public class Test20 {
 class ThreadEx5_1 extends Thread {
     public void run() {
         for(int i=0; i<300; i++) System.out.printf("%s", new String("|"));
-        log.debug("소요시간2 === "+(System.currentTimeMillis() - Test20.startTime));
+        System.out.println("소요시간2 === "+(System.currentTimeMillis() - Test20.startTime));
     }
 }
 

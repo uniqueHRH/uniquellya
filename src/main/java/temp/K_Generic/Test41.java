@@ -30,9 +30,9 @@ public class Test41 {
         toyBox.add(new Toy());
 //        toyBox.add(new Grape());  // Box<Toy> 에는 only Toy
 
-        log.debug("fruitBox === " + fruitBox);
-        log.debug("appleBox === " + appleBox);
-        log.debug("toyBox === " + toyBox);
+        System.out.println("fruitBox === " + fruitBox);
+        System.out.println("appleBox === " + appleBox);
+        System.out.println("toyBox === " + toyBox);
     }
 }
 

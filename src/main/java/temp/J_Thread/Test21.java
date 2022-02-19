@@ -18,10 +18,10 @@ import javax.swing.*;
 public class Test21 {
     public static void main(String[] args) throws InterruptedException {
         String input    = JOptionPane.showInputDialog("아무값이나 입력하세요");
-        log.debug("입력값 === " + input);
+        System.out.println("입력값 === " + input);
 
         for(int i=10; i>0; i--) {
-            log.debug("i === " + i);
+            System.out.println("i === " + i);
             try {
                 Thread.sleep(1000); // 1초간 시간 지연
             } catch (Exception e) {

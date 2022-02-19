@@ -11,7 +11,7 @@ public class Test5 {
     public static void main(String[] args) {
 
         int result = refact(5);
-        log.debug("result === "+result);
+        System.out.println("result === "+result);
     }
 
 //    static int  refact(int x) {

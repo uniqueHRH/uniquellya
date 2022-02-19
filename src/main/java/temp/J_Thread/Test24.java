@@ -32,7 +32,7 @@ public class Test24 {
         new Thread(subGrp1, runnable, "th2").start();
         new Thread(grp2,    runnable, "th3").start();
 
-        log.debug("============================================"
+        System.out.println("============================================"
                 + "\nList of ThreadGroup : " + main.getName()
                 + ",\nActive TheadGroup : " + main.activeGroupCount()
                 + ",\nActive Thread : " + main.activeCount());

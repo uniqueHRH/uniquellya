@@ -13,10 +13,10 @@ public class Test3 {
         long result3    = mm.multiply(5L, 3L);
         double result4  = mm.divide(5L, 3L);
 
-        log.debug("result1 ==="+result1);
-        log.debug("result2 ==="+result2);
-        log.debug("result3 ==="+result3);
-        log.debug("result4 ==="+result4);
+        System.out.println("result1 ==="+result1);
+        System.out.println("result2 ==="+result2);
+        System.out.println("result3 ==="+result3);
+        System.out.println("result4 ==="+result4);
     }
 
     static class MyMath {

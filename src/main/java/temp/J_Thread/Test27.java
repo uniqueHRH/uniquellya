@@ -26,7 +26,7 @@ public class Test27 {
             Test27_1.sleep(1000 * 10);  // t1 Thread 에 동작
         } catch (InterruptedException e) {}
 
-        log.debug("<< MAIN END >>");
+        System.out.println("<< MAIN END >>");
     }
 }
 

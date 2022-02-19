@@ -9,20 +9,20 @@ import lombok.extern.slf4j.Slf4j;
 public class Test8 {
 
     static {
-        log.debug("static 초기화 블럭");
+        System.out.println("static 초기화 블럭");
     }
     {
-        log.debug("non static 초기화 블럭");
+        System.out.println("non static 초기화 블럭");
     }
 
     public Test8() {
-        log.debug("생성자");
+        System.out.println("생성자");
     }
 
     public static void main(String[] args) {
-        log.debug("test 실행");
+        System.out.println("test 실행");
         Test8 test = new Test8();
-        log.debug("test2 실행");
+        System.out.println("test2 실행");
         Test8 test2 = new Test8();
 
     }

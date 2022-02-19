@@ -24,11 +24,11 @@ public class Test25 implements Runnable {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
             }
-            log.debug("i === " + i);
+            System.out.println("i === " + i);
 
             if(i == 5) autoSave = true;
         }
-        log.debug("프로그램을 종료합니다");
+        System.out.println("프로그램을 종료합니다");
     }
 
     @Override
@@ -43,6 +43,6 @@ public class Test25 implements Runnable {
     }
 
     public void autoSave() {
-        log.debug("작업파일이 자동저장 되었습니다.");
+        System.out.println("작업파일이 자동저장 되었습니다.");
     }
 }

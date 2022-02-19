@@ -12,14 +12,14 @@ public class Test7 {
         Car car     = new Car();
         Car car2    = new Car(car);
 
-        log.debug("car.door  === "+car.door);
-        log.debug("car2.door === "+car2.door);
+        System.out.println("car.door  === "+car.door);
+        System.out.println("car2.door === "+car2.door);
 
-        log.debug("car.gearType  === "+car.gearType);
-        log.debug("car2.gearType === "+car2.gearType);
+        System.out.println("car.gearType  === "+car.gearType);
+        System.out.println("car2.gearType === "+car2.gearType);
 
-        log.debug("car.color  === "+car.color);
-        log.debug("car2.color === "+car2.color);
+        System.out.println("car.color  === "+car.color);
+        System.out.println("car2.color === "+car2.color);
     }
 }
 

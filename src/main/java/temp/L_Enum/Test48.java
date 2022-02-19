@@ -20,8 +20,8 @@ public class Test48 {
         System.out.printf("t4 = %s, %d%n", t4.name(), t4.ordinal());
         System.out.printf("t5 = %s, %d%n", t5.name(), t5.ordinal());
 
-        log.debug("t1 == t2 ? " + (t1 == t2));
-        log.debug("t1.compareTo(t3) === " + t1.compareTo(t3));
+        System.out.println("t1 == t2 ? " + (t1 == t2));
+        System.out.println("t1.compareTo(t3) === " + t1.compareTo(t3));
     }
 }
 

@@ -20,7 +20,7 @@ public class Test46 {
         System.out.printf("d1 = %s, %d%n", d1.name(), d1.getValue());
         System.out.printf("d2 = %s, %d%n", d2.name(), d2.getValue());
 
-        log.debug("Direction.EAST.rotate(1) === "+Direction2.EAST.rotate(1));
+        System.out.println("Direction.EAST.rotate(1) === "+Direction2.EAST.rotate(1));
         log.debug("Direction.EAST.rotate(2) === "+Direction2.EAST.rotate(2));
         log.debug("Direction.EAST.rotate(-1) === "+Direction2.EAST.rotate(-1));
         log.debug("Direction.EAST.rotate(-2) === "+Direction2.EAST.rotate(-2));

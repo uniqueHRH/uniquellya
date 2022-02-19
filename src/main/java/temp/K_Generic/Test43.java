@@ -23,8 +23,8 @@ public class Test43 {
         appleBox.add(new Apple2());
         appleBox.add(new Apple2());
 
-        log.debug("Juicer.makeJuice(fruitBox === "+Juicer.makeJuice(fruitBox));
-        log.debug("Juicer.makeJuice(appleBox === "+Juicer.makeJuice(appleBox));
+        System.out.println("Juicer.makeJuice(fruitBox === "+Juicer.makeJuice(fruitBox));
+        System.out.println("Juicer.makeJuice(appleBox === "+Juicer.makeJuice(appleBox));
     }
 }
 

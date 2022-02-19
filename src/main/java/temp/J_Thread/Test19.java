@@ -12,10 +12,10 @@ public class Test19 {
         long startTime  = System.currentTimeMillis();
 
         for(int i=0; i<300; i++) System.out.printf("%s", new String("="));
-        log.debug("소요시간1 === "+(System.currentTimeMillis() - startTime));
+        System.out.println("소요시간1 === "+(System.currentTimeMillis() - startTime));
 
         for(int i=0; i<300; i++) System.out.printf("%s", new String("|"));
-        log.debug("소요시간2 === "+(System.currentTimeMillis() - startTime));
+        System.out.println("소요시간2 === "+(System.currentTimeMillis() - startTime));
     }
 }
 

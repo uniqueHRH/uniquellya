@@ -9,8 +9,8 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class Test47 {
     public static void main(String[] args) {
-        log.debug("bus fare ======== " + Transportation.BUS.fare(100));
-        log.debug("train fare ====== " + Transportation.TRAIN.fare(100));
+        System.out.println("bus fare ======== " + Transportation.BUS.fare(100));
+        System.out.println("train fare ====== " + Transportation.TRAIN.fare(100));
         log.debug("ship fare ======= " + Transportation.SHIP.fare(100));
         log.debug("airplane fare === " + Transportation.AIRPLANE.fare(100));
     }

@@ -38,7 +38,7 @@ class Table3 {
     public synchronized void add(String dish) {
         if(dishes.size() >= MAX_FOOD) {
             String name = Thread.currentThread().getName();
-            log.debug(name + " is waiting");
+            System.out.println(name + " is waiting");
 
             try {
                 wait(); // Cook Thread 를 대기시킨다
@@ -47,7 +47,7 @@ class Table3 {
         }
         dishes.add(dish);
         notify();   // 기다리는 Cust Thread 를 깨운다
-        log.debug("Dishes === " + dishes.toString());
+        System.out.println("Dishes === " + dishes.toString());
     }
 
     public void remove(String dishNames) {
@@ -55,7 +55,7 @@ class Table3 {
             String name = Thread.currentThread().getName();
             
             while(dishes.size() == 0) {
-                log.debug(name + " is waiting");
+                System.out.println(name + " is waiting");
                 
                 try {
                     wait(); // Cust Thread 를 대기시킨다

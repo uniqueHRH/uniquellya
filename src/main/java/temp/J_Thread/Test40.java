@@ -27,7 +27,7 @@ public class Test40 {
         long start      = System.currentTimeMillis();
         long result     = pool.invoke(task);    // invoke() 호출로 실행
 
-        log.debug("Elapsed time (4 core) === " + (System.currentTimeMillis() - start));
+        System.out.println("Elapsed time (4 core) === " + (System.currentTimeMillis() - start));
 
         System.out.printf("sum of %d ~ %d = %d%n", from, to, result);
 
@@ -37,7 +37,7 @@ public class Test40 {
             result += i;
         }
 
-        log.debug("Elapsed time (1 core) === " + (System.currentTimeMillis() - start));
+        System.out.println("Elapsed time (1 core) === " + (System.currentTimeMillis() - start));
         System.out.printf("sum of %d ~ %d = %d%n", from, to, result);
     }
 }

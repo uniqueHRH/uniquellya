@@ -45,7 +45,7 @@ class Table4 {
         try {
             if(dishes.size() >= MAX_FOOD) {
                 String name = Thread.currentThread().getName();
-                log.debug(name + " is waiting");
+                System.out.println(name + " is waiting");
 
                 try {
                     forCook.await();    // wait(); cook Thread 를 대기시킨다
@@ -54,7 +54,7 @@ class Table4 {
             }
             dishes.add(dish);
             forCust.signal();   // notify(); 대기중인 Cust 를 깨운다
-            log.debug("Dishes === " + dishes.toString());
+            System.out.println("Dishes === " + dishes.toString());
         } finally {
             lock.unlock();
         }
@@ -66,7 +66,7 @@ class Table4 {
             
         try {
             while(dishes.size() == 0) {
-                log.debug(name + " is waiting");
+                System.out.println(name + " is waiting");
 
                 try {
                     forCust.await();    // wait(); Cust Thread 대기시킨다
@@ -82,7 +82,7 @@ class Table4 {
                     }
                 }
                 try {
-                    log.debug(name + "is waiting");
+                    System.out.println(name + "is waiting");
                     forCust.await();    // wait(); 원하는 음식이 없는 Cust Thread 를 대기시킨다
                     Thread.sleep(500);
                 } catch(InterruptedException e) {}
@@ -113,7 +113,7 @@ class Customer4 implements Runnable {
             String name = Thread.currentThread().getName();
 
             table.remove(food);
-            log.debug(name + " ate a " + food);
+            System.out.println(name + " ate a " + food);
         }
     }
 }

@@ -25,15 +25,15 @@ public class Test49 {
         Class<Test49> cls   = Test49.class;
 
         TestInfo anno   = (TestInfo)cls.getAnnotation(TestInfo.class);
-        log.debug("anno.testedBy() === " + anno.testedBy());
-        log.debug("anno.testDate().yymmdd() === " + anno.testDate().yymmdd());
-        log.debug("anno.testDate().hhmmss() === " + anno.testDate().hhmmss());
+        System.out.println("anno.testedBy() === " + anno.testedBy());
+        System.out.println("anno.testDate().yymmdd() === " + anno.testDate().yymmdd());
+        System.out.println("anno.testDate().hhmmss() === " + anno.testDate().hhmmss());
 
-        for(String str : anno.testTools()) log.debug("testTools === " + str);
+        for(String str : anno.testTools()) System.out.println("testTools === " + str);
 
 //      Test33에 적용된 모든 어노테이션을 획득
         Annotation[] annoArr    = cls.getAnnotations();
-        for(Annotation a : annoArr) log.debug("anno === " + a);
+        for(Annotation a : annoArr) System.out.println("anno === " + a);
     }
 }
 

@@ -31,14 +31,14 @@ public class Test44 {
         Collections.sort(appleBox.getList(),    new AppleComp());
         Collections.sort(grapeBox.getList(),    new GrapeComp());
 
-        log.debug("appleBox === " + appleBox);
-        log.debug("grapeBox === " + grapeBox);
+        System.out.println("appleBox === " + appleBox);
+        System.out.println("grapeBox === " + grapeBox);
 
         Collections.sort(appleBox.getList() , new FruitComp());
         Collections.sort(grapeBox.getList() , new FruitComp());
 
-        log.debug("appleBox === " + appleBox);
-        log.debug("grapeBox === " + grapeBox);
+        System.out.println("appleBox === " + appleBox);
+        System.out.println("grapeBox === " + grapeBox);
     }
 }
 

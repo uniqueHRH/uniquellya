@@ -23,9 +23,9 @@ public class Test42 {
 //        appleBox.add(new Grapes());   // Grapes는 Apples 의 자손이 아님
         grapeBox.add(new Grapes());
         
-        log.debug("fruitBox === " + fruitBox);
-        log.debug("appleBox === " + appleBox);
-        log.debug("grapeBox === " + grapeBox);
+        System.out.println("fruitBox === " + fruitBox);
+        System.out.println("appleBox === " + appleBox);
+        System.out.println("grapeBox === " + grapeBox);
     }
 }
 

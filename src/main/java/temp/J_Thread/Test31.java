@@ -54,13 +54,13 @@ class Test31_1 implements Runnable {
     public void run() {
         while(!stopped) {
             if(!suspended) {
-                log.debug("Thread.currentThread().getName()" + Thread.currentThread().getName());
+                System.out.println("Thread.currentThread().getName()" + Thread.currentThread().getName());
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {}
             }
         }
-        log.debug(Thread.currentThread().getName() + " -stopped");
+        System.out.println(Thread.currentThread().getName() + " -stopped");
     }
     public void suspend()   { suspended = true;     }
     public void resume()    { suspended = false;    }

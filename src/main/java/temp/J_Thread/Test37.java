@@ -40,14 +40,14 @@ class Table2 {
     public synchronized void add(String dish) {
         if(dishes.size() >= MAX_FOOD) return;
         dishes.add(dish);
-        log.debug("Dishes === " + dishes.toString());
+        System.out.println("Dishes === " + dishes.toString());
     }
 
     public boolean remove(String dishNames) {
         synchronized (this) {
             while(dishes.size() == 0) {
                 String name = Thread.currentThread().getName();
-                log.debug(name + " is waiting");
+                System.out.println(name + " is waiting");
                 try {
                     Thread.sleep(500);
                 } catch (InterruptedException e) {}
@@ -83,7 +83,7 @@ class Customer2 implements Runnable {
             } catch (InterruptedException e) {}
             String name = Thread.currentThread().getName();
 
-            if(eatFood()) log.debug(name + " ate a " + food);
+            if(eatFood()) System.out.println(name + " ate a " + food);
             else log.debug(name + " failed to eat...");
         }
     }

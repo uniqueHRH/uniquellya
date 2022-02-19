@@ -19,17 +19,17 @@ public class Test50 {
     }
     
     static MyFunction getMyFunction() { // 반환타입이 MyFunction 인 메소드
-        MyFunction function = () -> log.debug("f3.run()");
+        MyFunction function = () -> System.out.println("f3.run()");
         return function;
     }
 
     public static void main(String[] args) {
         // 람다식으로 MyFunction 의 run() 구현
-        MyFunction f1   = () -> log.debug("f1.run()");
+        MyFunction f1   = () -> System.out.println("f1.run()");
         MyFunction f2   = new MyFunction() {
             @Override
             public void run() {
-                log.debug("f2.run()");
+                System.out.println("f2.run()");
             }
         };
         MyFunction f3   = getMyFunction();
@@ -39,6 +39,6 @@ public class Test50 {
         f3.run();
 
         execute(f1);
-        execute(() -> log.debug("run()"));
+        execute(() -> System.out.println("run()"));
     }
 }

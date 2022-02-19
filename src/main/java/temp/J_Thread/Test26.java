@@ -52,7 +52,7 @@ class Test26_2 extends Thread {
                     + ", daemon = " + t.isDaemon());
 
             for(int i=0; i<ste.length; i++) {
-//                log.debug("ste[i] === " + ste[i]);
+//                System.out.println("ste[i] === " + ste[i]);
                 System.out.println("ste[i] === " + ste[i]);
             }
             System.out.println();

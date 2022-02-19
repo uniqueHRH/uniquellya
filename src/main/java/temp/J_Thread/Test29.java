@@ -45,7 +45,7 @@ class RunnableImpl implements Runnable {
     @Override
     public void run() {
         while(true) {
-//            log.debug("Thread name === " + Thread.currentThread().getName());
+//            System.out.println("Thread name === " + Thread.currentThread().getName());
             System.out.println("Thread name === " + Thread.currentThread().getName());
             try {
                 Thread.sleep(1000);
