@@ -8,7 +8,8 @@ import java.util.Arrays;
 
 /**
  * I/O
- * [ ByteArrayInputStream & ByteArrayOutputStream ]
+ * [바이트기반 Stream ]
+ * ByteArrayInputStream & ByteArrayOutputStream
  * 
  * byte 배열은 메모리 자원만 사용하므로 close() 를 이용해 Stream 을 닫지 않아도, 가비지컬렉터가 자원 자동 반환
  */

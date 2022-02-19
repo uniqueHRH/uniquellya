@@ -9,7 +9,8 @@ import java.util.Arrays;
 
 /**
  * I/O
- * [ FileInputStream & FileOutputStream ]
+ * [바이트기반 Stream ]
+ * FileInputStream & FileOutputStrea
  */
 @Slf4j
 public class Test67 {

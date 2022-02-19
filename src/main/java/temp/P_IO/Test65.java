@@ -8,7 +8,8 @@ import java.util.Arrays;
 
 /**
  * I/O
- * [ ByteArrayInputStream & ByteArrayOutputStream ]
+ * [바이트기반 Stream ]
+ * yteArrayInputStream & ByteArrayOutputStream
  * 
  * Test64 와 다르게 byte 배열을 이용해 한 번에 배열의 크기만큼 읽고 쓰도록 했다
  * temp.length 가 10이기 때문에 10 byte 를 읽어왔고,

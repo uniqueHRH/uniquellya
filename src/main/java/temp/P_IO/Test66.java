@@ -9,7 +9,8 @@ import java.util.Arrays;
 
 /**
  * I/O
- * [ ByteArrayInputStream & ByteArrayOutputStream ]
+ * [바이트기반 Stream ]
+ * ByteArrayInputStream & ByteArrayOutputStream
  */
 @Slf4j
 public class Test66 {
