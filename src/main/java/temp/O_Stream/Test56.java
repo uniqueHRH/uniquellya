@@ -1,11 +1,8 @@
 package temp.O_Stream;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.IntSummaryStatistics;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
-
 
 /**
  * Stream
@@ -13,7 +10,6 @@ import java.util.stream.Stream;
  * sum, average 와 같은 연산을 함께 수행하기 위해서는 Stream 객체를 여러개 만들어야 한다
  * 이럴 때 사용할 수 있는 메소드 -> 동시 사용 가능
  */
-@Slf4j
 public class Test56 {
     public static void main(String[] args) {
         Student2[] stuArr   = {
@@ -34,11 +30,11 @@ public class Test56 {
 
         IntSummaryStatistics stat   = stuScoreStream.summaryStatistics();
 
-        log.debug("count ===== " + stat.getCount());
-        log.debug("sum ======= " + stat.getSum());
+        System.out.println("count ===== " + stat.getCount());
+        System.out.println("sum ======= " + stat.getSum());
         System.out.printf("average === %.2f%n", stat.getAverage());
-        log.debug("min ======= " + stat.getMin());
-        log.debug("max ======= " + stat.getMax());
+        System.out.println("min ======= " + stat.getMin());
+        System.out.println("max ======= " + stat.getMax());
     }
 }
 

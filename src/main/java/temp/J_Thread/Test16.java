@@ -1,7 +1,5 @@
 package temp.J_Thread;
 
-import lombok.extern.slf4j.Slf4j;
-
 /**
  * Thread
  *
@@ -12,7 +10,6 @@ import lombok.extern.slf4j.Slf4j;
  *                    사용자에 대한 응답성 향상
  *                    작업 분리에 따른 간결한 코드
  */
-@Slf4j
 public class Test16 {
 
     public static void main(String[] args) {
@@ -52,23 +49,21 @@ public class Test16 {
     }
 }
 
-@Slf4j
 class ThreadEx1_1 extends Thread {
     public void run() {
         for(int i=0; i<5; i++) {
-            log.debug("ThreadEx1_1   ===" + getName());
+            System.out.println("ThreadEx1_1   ===" + getName());
         }
     }
 }
 
-@Slf4j
 class ThreadEx1_2 implements Runnable {
 
     @Override
     public void run() {
         for(int i=0; i<5; i++) {
             // Thread.currentThread()   -> 현재 실행중인 thread 반환
-            log.debug("currentThread === " + Thread.currentThread());
+            System.out.println("currentThread === " + Thread.currentThread());
         }
     }
 }

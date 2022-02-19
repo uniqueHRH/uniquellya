@@ -1,6 +1,4 @@
-package temp.P_IO;
-
-import lombok.extern.slf4j.Slf4j;
+package temp.P_IO.C_standard;
 
 import java.io.EOFException;
 import java.io.IOException;
@@ -18,7 +16,6 @@ import java.io.RandomAccessFile;
  *    -> 파일 포인터를 사용하기 때문
  *    -> 단 파일 포인터를 원하는 위치로 옮긴 다음 작업 필요
  */
-@Slf4j
 public class Test85 {
     public static void main(String[] args) {
         /**
@@ -36,7 +33,7 @@ public class Test85 {
             e.printStackTrace();
         }
 
-        log.debug("============================================");
+        System.out.println("============================================");
 ////////////////////////////////////////////////////////////////////////////
         /**
          * bat 파일은 생성되지만, console에는 아무것도 출력되지 않는다
@@ -68,7 +65,7 @@ public class Test85 {
             e.printStackTrace();
         }
 
-        log.debug("============================================");
+        System.out.println("============================================");
 ////////////////////////////////////////////////////////////////////////////
         /**
          * 기존 생성된 Test85.dat 파일의 국어과목 합계 예제

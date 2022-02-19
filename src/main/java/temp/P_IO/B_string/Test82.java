@@ -1,6 +1,4 @@
-package temp.P_IO;
-
-import lombok.extern.slf4j.Slf4j;
+package temp.P_IO.B_string;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -15,7 +13,6 @@ import java.io.InputStreamReader;
  * -> 바이트 기반 Stream 을 문자 기반 Stream 으로 연결시켜주는 역할
  * -> 바이트기반 스트림을 지정된 인코딩의 문자데이터로 변환
  */
-@Slf4j
 public class Test82 {
     public static void main(String[] args) {
         String line = "";
@@ -24,7 +21,7 @@ public class Test82 {
             InputStreamReader   isr = new InputStreamReader(System.in);
             BufferedReader      br  = new BufferedReader(isr);
 
-            log.debug("사용중인 OS 의 인코딩 === " + isr.getEncoding());
+            System.out.println("사용중인 OS 의 인코딩 === " + isr.getEncoding());
 
             do {
                 System.out.print("문장을 입력하세요 . 마치려면 q를 입력하세요 >");

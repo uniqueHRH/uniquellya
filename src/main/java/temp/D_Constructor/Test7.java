@@ -1,11 +1,8 @@
 package temp.D_Constructor;
 
-import lombok.extern.slf4j.Slf4j;
-
 /**
  * 생성자를 이용한 인스턴스의 복사
  */
-@Slf4j
 public class Test7 {
 
     public static void main(String[] args) {

@@ -1,6 +1,4 @@
-package temp.P_IO;
-
-import lombok.extern.slf4j.Slf4j;
+package temp.P_IO.A_byte;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -19,7 +17,6 @@ import java.util.Vector;
  * -> 큰 파일을 여러개의 작은 파일로 나누었다가 하나의 파일로 합치는 것과 같은 작업의 수행에 용이
  * PrintStream
  */
-@Slf4j
 public class Test75 {
     /**
      * Vector -> 순서가 있는 데이터의 집합체
@@ -51,9 +48,9 @@ public class Test75 {
         }
         outSrc  = output.toByteArray();
 
-        log.debug("input Source1 === " + Arrays.toString(arr1));
-        log.debug("input Source2 === " + Arrays.toString(arr2));
-        log.debug("input Source3 === " + Arrays.toString(arr3));
-        log.debug("output Source === " + Arrays.toString(outSrc));
+        System.out.println("input Source1 === " + Arrays.toString(arr1));
+        System.out.println("input Source2 === " + Arrays.toString(arr2));
+        System.out.println("input Source3 === " + Arrays.toString(arr3));
+        System.out.println("output Source === " + Arrays.toString(outSrc));
     }
 }

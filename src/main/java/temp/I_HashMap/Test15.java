@@ -1,7 +1,5 @@
 package temp.I_HashMap;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -10,7 +8,6 @@ import java.util.Set;
 /**
  * hashMap
  */
-@Slf4j
 @SuppressWarnings("unchecked")
 public class Test15 {
 

@@ -1,11 +1,8 @@
 package temp.J_Thread;
 
-import lombok.extern.slf4j.Slf4j;
-
 /**
  * Thread Group
  */
-@Slf4j
 public class Test24 {
     public static void main(String[] args) {
         ThreadGroup main    = Thread.currentThread().getThreadGroup();

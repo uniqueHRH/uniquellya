@@ -1,7 +1,5 @@
 package temp.K_Generic;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -14,7 +12,6 @@ import java.util.Comparator;
  * <? super T>      // T와 그 조상만 가능
  * <?>              // All. <? extends Object> 와 동일
  */
-@Slf4j
 public class Test44 {
     public static void main(String[] args) {
         FruitBox3<Apple3> appleBox   = new FruitBox3<Apple3>();

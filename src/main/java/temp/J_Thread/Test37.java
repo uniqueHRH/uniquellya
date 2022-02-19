@@ -1,7 +1,5 @@
 package temp.J_Thread;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 
 /**
@@ -17,7 +15,6 @@ import java.util.ArrayList;
  * 이럴 때, wait() & notify() 사용
  * => Test38 에서 wait() & notify() 적용 예제 확인
  */
-@Slf4j
 public class Test37 {
     public static void main(String[] args) throws InterruptedException {
         Table2 table = new Table2();
@@ -31,7 +28,6 @@ public class Test37 {
     }
 }
 
-@Slf4j
 class Table2 {
     String[] dishNames  = { "donut", "donut", "burger"};
     final int MAX_FOOD  = 6;
@@ -65,7 +61,6 @@ class Table2 {
     public int dishNum() { return dishNames.length; }
 }
 
-@Slf4j
 class Customer2 implements Runnable {
     private Table2  table;
     private String  food;
@@ -84,13 +79,12 @@ class Customer2 implements Runnable {
             String name = Thread.currentThread().getName();
 
             if(eatFood()) System.out.println(name + " ate a " + food);
-            else log.debug(name + " failed to eat...");
+            else System.out.println(name + " failed to eat...");
         }
     }
     boolean eatFood() { return table.remove(food); }
 }
 
-@Slf4j
 class Cook2 implements Runnable {
     private Table2  table;
 

@@ -1,7 +1,5 @@
 package temp.J_Thread;
 
-import lombok.extern.slf4j.Slf4j;
-
 import javax.swing.*;
 
 /**
@@ -11,7 +9,6 @@ import javax.swing.*;
  *          boolean isInterrupted() : Thread 의 interrupted 상태를 반환
  * static   boolean interrupted()   : 현재 Thread 의 interrupted 상태를 반환 후, false 로 변경
  */
-@Slf4j
 public class Test28 {
     public static void main(String[] args) {
         Test28_1 t1 = new Test28_1();
@@ -25,7 +22,6 @@ public class Test28 {
     }
 }
 
-@Slf4j
 class Test28_1 extends Thread {
     /**
      * for 문으로 시간을 지연시킬 때 : 입력이 끝나면 Thread 는 즉시 종료된다 -> isInterrupted() 는 true

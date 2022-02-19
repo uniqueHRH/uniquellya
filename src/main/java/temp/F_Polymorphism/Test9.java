@@ -1,11 +1,8 @@
 package temp.F_Polymorphism;
 
-import lombok.extern.slf4j.Slf4j;
-
 /**
  * 다형성
  */
-@Slf4j
 public class Test9 {
 
     public static void main(String[] args) {

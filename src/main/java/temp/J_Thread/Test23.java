@@ -1,7 +1,5 @@
 package temp.J_Thread;
 
-import lombok.extern.slf4j.Slf4j;
-
 /**
  * Thread 우선순위
  * 실행의 우선순위 설정
@@ -12,7 +10,6 @@ import lombok.extern.slf4j.Slf4j;
  * Ex.  채팅 내용을 전송하는 thread 가 파일 다운로드 thread 보다 우선되어야 함
  *      파일 다운로드 시간은 더 길어지겠지만, 사용자에게 빠른 반응을 주는 것이 우선
  */
-@Slf4j
 public class Test23 {
     public static void main(String[] args) {
         ThreadEx8_1 thread1 = new ThreadEx8_1();
@@ -32,7 +29,6 @@ public class Test23 {
     }
 }
 
-@Slf4j
 class ThreadEx8_1 extends Thread {
     public void run() {
         for(int i=0; i<300; i++) {
@@ -42,7 +38,6 @@ class ThreadEx8_1 extends Thread {
     }
 }
 
-@Slf4j
 class ThreadEx8_2 extends Thread {
     public void run() {
         for(int i=0; i<300; i++) {

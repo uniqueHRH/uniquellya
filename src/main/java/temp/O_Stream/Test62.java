@@ -1,7 +1,5 @@
 package temp.O_Stream;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.*;
 import java.util.stream.Stream;
 
@@ -15,7 +13,6 @@ import static java.util.stream.Collectors.*;
  * partitioningBy       : 조건에 따른 Stream 요소 분리
  * collectingAndThen    : collecting 후, 그 값으로 새로운 메소드를 호출하여 활용
  */
-@Slf4j
 public class Test62 {
     public static void main(String[] args) {
         Student5[] stuArr  = {
@@ -44,7 +41,7 @@ public class Test62 {
                                                     .collect(groupingBy(Student5::getBan));
         for(List<Student5> ban : stuByBan.values()) {
             for(Student5 s : ban) {
-                log.debug("s === " + s);
+                System.out.println("s === " + s);
             }
         }
         
@@ -57,8 +54,8 @@ public class Test62 {
                                                             }));
         TreeSet<Student5.Level> keySet  = new TreeSet<>(stuByLevel.keySet());
         for(Student5.Level key : keySet) {
-            log.debug("[ " + key + " ]");
-            for(Student5 s : stuByLevel.get(key)) log.debug("s === " + s);
+            System.out.println("[ " + key + " ]");
+            for(Student5 s : stuByLevel.get(key)) System.out.println("s === " + s);
         }
 
         System.out.printf("%n3. 단순그룹화 + 통계(성적별 학생수)%n");
@@ -71,9 +68,9 @@ public class Test62 {
         for(Student5.Level key : stuCntByLevel.keySet()) System.out.printf("[%s] = %d명, ", key, stuCntByLevel.get(key));
         /*
         for(List<Student5> level : stuByLevel.values()) {
-            log.debug("");
+            System.out.println("");
             for(Student5 s : level) {
-                log.debug("s === " + s);
+                System.out.println("s === " + s);
             }
         }
          */
@@ -84,8 +81,8 @@ public class Test62 {
                                                                             , groupingBy(Student5::getBan)));
         for(Map<Integer, List<Student5>> hak : stuByHakNBan.values()) { // 반별 grouping
             for(List<Student5> ban : hak.values()) {    // 인원 List
-                log.debug("");
-                for (Student5 s : ban) log.debug("s === " + s);
+                System.out.println("");
+                for (Student5 s : ban) System.out.println("s === " + s);
             }
         }
 
@@ -101,7 +98,7 @@ public class Test62 {
                                                                     ));
         for(Map<Integer, Student5> ban  : topStuByHakNBan.values())
             for(Student5 s : ban.values())
-                log.debug("s === " + s);
+                System.out.println("s === " + s);
 
         System.out.printf("%n6. 다중그룹화 + 통계(학년별, 반별 성적그룹)%n");
         Map<String, Set<Student5.Level>> stuByScoreGroup    = Stream.of(stuArr)
@@ -114,7 +111,7 @@ public class Test62 {
                                                                 ));
         Set<String> keySet2 = stuByScoreGroup.keySet();
         for(String key : keySet2) {
-            log.debug("[ " + key + " ]" + stuByScoreGroup.get(key));
+            System.out.println("[ " + key + " ]" + stuByScoreGroup.get(key));
         }
     }
 }

@@ -1,6 +1,4 @@
-package temp.P_IO;
-
-import lombok.extern.slf4j.Slf4j;
+package temp.P_IO.A_byte;
 
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
@@ -16,7 +14,6 @@ import java.util.Arrays;
  * SequenceInputStream
  * PrintStream
  */
-@Slf4j
 public class Test70 {
     public static void main(String[] args) {
         ByteArrayOutputStream   bos = null;
@@ -41,8 +38,8 @@ public class Test70 {
                     hex[i]  = String.format("%02x", result[i]);
                 }
             }
-            log.debug("10진수 === " + Arrays.toString(result));
-            log.debug("16진수 === " + Arrays.toString(hex));
+            System.out.println("10진수 === " + Arrays.toString(result));
+            System.out.println("16진수 === " + Arrays.toString(hex));
 
             dos.close();
         } catch(IOException e) {

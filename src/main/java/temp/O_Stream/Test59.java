@@ -1,7 +1,5 @@
 package temp.O_Stream;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Optional;
 import java.util.OptionalInt;
 import java.util.stream.IntStream;
@@ -16,7 +14,6 @@ import java.util.stream.Stream;
  * reduce                       : Stream 의 요소를 줄여가며 연산을 수행하고 최종결과 반환
  *                                초기값 identitu 를 갖는 reduce() 도 존재 -> 초기값과 Stream 의 첫번째 요소로 연산 시작
  */
-@Slf4j
 public class Test59 {
     public static void main(String[] args) {
         String[] strArr = {
@@ -29,9 +26,9 @@ public class Test59 {
         Optional<String>    sWord       = Stream.of(strArr)
                                             .filter(s -> s.charAt(0) == 's').findFirst();
 
-        log.debug("noEmptyStr === " + noEmptyStr);
-        log.debug("sWord === " + sWord.get());
-        log.debug("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
+        System.out.println("noEmptyStr === " + noEmptyStr);
+        System.out.println("sWord === " + sWord.get());
+        System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
 
         /**
          * mapToInt
@@ -49,9 +46,9 @@ public class Test59 {
         OptionalInt max = intStream3.reduce(Integer::max);
         OptionalInt min = intStream4.reduce(Integer::min);
 
-        log.debug("count === " + count);
-        log.debug("sum === " + sum);
-        log.debug("max === " + max);
-        log.debug("min === " + min);
+        System.out.println("count === " + count);
+        System.out.println("sum === " + sum);
+        System.out.println("max === " + max);
+        System.out.println("min === " + min);
     }
 }

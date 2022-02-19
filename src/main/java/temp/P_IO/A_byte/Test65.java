@@ -1,7 +1,5 @@
 package temp.P_IO;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.util.Arrays;
@@ -16,7 +14,6 @@ import java.util.Arrays;
  * temp[5] 부터 5byte 만 읽어오도록 출력했다
  * 배열을 이용한 입출ㄹ은 작업의 효율 증가 -> 대상에 따라 알맞은 크기의 배열을 사용한다
  */
-@Slf4j
 public class Test65 {
     public static void main(String[] args) {
         byte[] inSrc    = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
@@ -34,8 +31,8 @@ public class Test65 {
 
         outSrc  = output.toByteArray();
 
-        log.debug("Input Source === " + Arrays.toString(inSrc));
-        log.debug("temp === " + Arrays.toString(temp));
-        log.debug("Output Source === " + Arrays.toString(outSrc));
+        System.out.println("Input Source === " + Arrays.toString(inSrc));
+        System.out.println("temp === " + Arrays.toString(temp));
+        System.out.println("Output Source === " + Arrays.toString(outSrc));
     }
 }

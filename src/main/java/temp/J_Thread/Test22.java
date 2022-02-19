@@ -1,7 +1,5 @@
 package temp.J_Thread;
 
-import lombok.extern.slf4j.Slf4j;
-
 import javax.swing.*;
 
 /**
@@ -14,7 +12,6 @@ import javax.swing.*;
  *
  * 유저가 입력을 끝내기 전에 for문은 별도로 동작한다 = 병행
  */
-@Slf4j
 public class Test22 {
     public static void main(String[] args) {
         ThreadEx7_1 thread7 = new ThreadEx7_1();
@@ -25,7 +22,6 @@ public class Test22 {
     }
 }
 
-@Slf4j
 class ThreadEx7_1 extends Thread {
     public void run() {
         for(int i=10; i>0; i--) {

@@ -1,7 +1,5 @@
 package temp.O_Stream;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -17,7 +15,6 @@ import static java.util.stream.Collectors.*;
  * partitioningBy       : 조건에 따른 Stream 요소 분리
  * collectingAndThen    : collecting 후, 그 값으로 새로운 메소드를 호출하여 활용
  */
-@Slf4j
 public class Test61 {
     public static void main(String[] args) {
         Student4[] stuArr  = {
@@ -49,31 +46,31 @@ public class Test61 {
         List<Student4> maleStudent      = stuBySex.get(true);
         List<Student4> femaleStudent    = stuBySex.get(false);
 
-        for(Student4 s : maleStudent)   log.debug("s === " + s);
-        for(Student4 s : femaleStudent) log.debug("s === " + s);
+        for(Student4 s : maleStudent)   System.out.println("s === " + s);
+        for(Student4 s : femaleStudent) System.out.println("s === " + s);
 
         System.out.printf("%n2. 단순분할 + 통계(성별 학생수)%n");
         Map<Boolean, Long>  stuNumBySex = Stream.of(stuArr)
                                             .collect(partitioningBy(Student4::isMale, counting()));
         
-        log.debug("남학생수 === " + stuNumBySex.get(true));
-        log.debug("여학생수 === " + stuNumBySex.get(false));
+        System.out.println("남학생수 === " + stuNumBySex.get(true));
+        System.out.println("여학생수 === " + stuNumBySex.get(false));
 
         System.out.printf("%n3. 단순분할 + 통계(성별 1등)%n");
         Map<Boolean, Optional<Student4>> topScoreBySex   = Stream.of(stuArr)
                                                             .collect(partitioningBy(Student4::isMale,
                                                                     maxBy(comparingInt(Student4::getScore))));
-        log.debug("남학생 1등 === " + topScoreBySex.get(true));
-        log.debug("여학생 1등 === " + topScoreBySex.get(false));
-        log.debug("----------------------------------------------------------");
+        System.out.println("남학생 1등 === " + topScoreBySex.get(true));
+        System.out.println("여학생 1등 === " + topScoreBySex.get(false));
+        System.out.println("----------------------------------------------------------");
 
         Map<Boolean, Student4> topScoreBySex2   = Stream.of(stuArr)
                                                     .collect(partitioningBy(Student4::isMale,
                                                             collectingAndThen(
                                                                     maxBy(comparingInt(Student4::getScore)), Optional::get)
                                                             ));
-        log.debug("남학생 1등 === " + topScoreBySex2.get(true));
-        log.debug("여학생 1등 === " + topScoreBySex2.get(false));
+        System.out.println("남학생 1등 === " + topScoreBySex2.get(true));
+        System.out.println("여학생 1등 === " + topScoreBySex2.get(false));
 
         System.out.printf("%n4. 다중분할(성별 불합격자, 100점 이하)%n");
 
@@ -83,8 +80,8 @@ public class Test61 {
         List<Student4> failedMaleStu    = failedStuBySex.get(true).get(true);
         List<Student4> failedFemaleStu  = failedStuBySex.get(false).get(true);
 
-        for(Student4 s : failedMaleStu)     log.debug("s === " + s);
-        for(Student4 s : failedFemaleStu)   log.debug("s === " + s);
+        for(Student4 s : failedMaleStu)     System.out.println("s === " + s);
+        for(Student4 s : failedFemaleStu)   System.out.println("s === " + s);
     }
 }
 

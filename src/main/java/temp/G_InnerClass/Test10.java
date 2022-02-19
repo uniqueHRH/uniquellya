@@ -1,4 +1,4 @@
-package temp.G.InnerClass;
+package temp.G_InnerClass;
 
 /**
  * 내부클래스 1

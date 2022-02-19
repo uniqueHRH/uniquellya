@@ -1,6 +1,4 @@
-package temp.P_IO;
-
-import lombok.extern.slf4j.Slf4j;
+package temp.P_IO.A_byte;
 
 import java.io.*;
 
@@ -13,7 +11,6 @@ import java.io.*;
  * SequenceInputStream
  * PrintStream
  */
-@Slf4j
 public class Test74 {
     public static void main(String[] args) {
         int sum     = 0;
@@ -29,11 +26,11 @@ public class Test74 {
 
             while (true) {
                 score = dis.readInt();
-                log.debug("scroe === " + score);
+                System.out.println("scroe === " + score);
                 sum += score;
             }
         } catch (EOFException e) {
-            log.debug("점수의 총합은 === " + sum + " 입니다");
+            System.out.println("점수의 총합은 === " + sum + " 입니다");
         } catch (IOException e) {
             e.printStackTrace();
         }

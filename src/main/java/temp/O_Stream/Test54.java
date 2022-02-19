@@ -1,7 +1,5 @@
 package temp.O_Stream;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Comparator;
 import java.util.stream.Stream;
 
@@ -9,7 +7,6 @@ import java.util.stream.Stream;
  * Stream
  * 정렬 - Basic
  */
-@Slf4j
 public class Test54 {
     public static void main(String[] args) {
         Stream<Student> studentStream   = Stream.of(

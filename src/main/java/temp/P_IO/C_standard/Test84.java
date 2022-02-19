@@ -1,4 +1,4 @@
-package temp.P_IO;
+package temp.P_IO.C_standard;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;

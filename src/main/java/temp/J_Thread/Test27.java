@@ -1,12 +1,9 @@
 package temp.J_Thread;
 
-import lombok.extern.slf4j.Slf4j;
-
 /**
  * Control Thread
  * [ sleep ] -> Thread 일시정지
  */
-@Slf4j
 public class Test27 {
     public static void main(String[] args) {
         Test27_1 t1 = new Test27_1();

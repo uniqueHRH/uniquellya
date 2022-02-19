@@ -1,7 +1,5 @@
 package temp.O_Stream;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
@@ -16,7 +14,6 @@ import java.util.stream.Stream;
  *
  * stream1 과 stream2 의 dataSource 는 다르지만, 읽고 정렬 및 출력하는 방법은 동일하다
  */
-@Slf4j
 public class Test53 {
     public static void main(String[] args) {
         String[]        strArr  = {"aaa", "ddd", "ccc" };

@@ -1,44 +1,41 @@
 package temp.L_Enum;
 
-import lombok.extern.slf4j.Slf4j;
-
 /**
  * Enum1
  */
 
 enum Direction { EAST, SOUTH, WEST, NORTH }
 
-@Slf4j
 public class Test45 {
     public static void main(String[] args) {
         Direction d1    = Direction.EAST;
         Direction d2    = Direction.valueOf("WEST");
         Direction d3    = Enum.valueOf(Direction.class, "EAST");
 
-        log.debug("d1 === " + d1);
-        log.debug("d2 === " + d2);
-        log.debug("d3 === " + d3);
+        System.out.println("d1 === " + d1);
+        System.out.println("d2 === " + d2);
+        System.out.println("d3 === " + d3);
 
-        log.debug("d1 == d2 ? " + (d1 == d2));
-        log.debug("d1 == d3 ? " + (d1 == d3));
-        log.debug("d1.equals(d3) ? " + d1.equals(d3));
-//        log.debug("d2 > d3 ? " + (d1 > d3));  // 에러 -> enum 은 <, > 로 비교 불가
-        log.debug("d1.compareTo(d3) ? " + (d1.compareTo(d3)));
-        log.debug("d1.compareTo(d2) ? " + (d1.compareTo(d2)));
+        System.out.println("d1 == d2 ? " + (d1 == d2));
+        System.out.println("d1 == d3 ? " + (d1 == d3));
+        System.out.println("d1.equals(d3) ? " + d1.equals(d3));
+//        System.out.println("d2 > d3 ? " + (d1 > d3));  // 에러 -> enum 은 <, > 로 비교 불가
+        System.out.println("d1.compareTo(d3) ? " + (d1.compareTo(d3)));
+        System.out.println("d1.compareTo(d2) ? " + (d1.compareTo(d2)));
 //        ※ compareTo : 양쪽이 동일하면 0 / 좌측이 크면 + / 우측이 크면 -
 
         switch (d1) {
             case EAST:  // Direction.EAST 로 사용 불가
-                log.debug("The direction is EAST");
+                System.out.println("The direction is EAST");
                 break;
             case SOUTH:
-                log.debug("The direction is SOUTH");
+                System.out.println("The direction is SOUTH");
                 break;
             case WEST:
-                log.debug("The direction is WEST");
+                System.out.println("The direction is WEST");
                 break;
             case NORTH:
-                log.debug("The direction is NORTH");
+                System.out.println("The direction is NORTH");
                 break;
         }
 

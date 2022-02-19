@@ -1,7 +1,5 @@
 package temp.K_Generic;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 
 /**
@@ -12,7 +10,6 @@ class Apple extends Fruit   { public String toString() { return "Apple"; }}
 class Grape extends Fruit   { public String toString() { return "Grape"; }}
 class Toy                   { public String toString() { return "Toy"; }}
 
-@Slf4j
 public class Test41 {
     public static void main(String[] args) {
         Box<Fruit> fruitBox = new Box<Fruit>();

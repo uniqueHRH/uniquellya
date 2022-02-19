@@ -1,13 +1,10 @@
 package temp.K_Generic;
 
-import lombok.extern.slf4j.Slf4j;
-
 /**
  * generic2 제한
  * 상속을 통한 제한이 가능하다
  */
 
-@Slf4j
 public class Test42 {
     public static void main(String[] args) {
         FruitBox<Fruits> fruitBox   = new FruitBox<Fruits>();

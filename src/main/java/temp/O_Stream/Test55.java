@@ -1,7 +1,5 @@
 package temp.O_Stream;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.io.File;
 import java.util.stream.Stream;
 
@@ -11,7 +9,6 @@ import java.util.stream.Stream;
  * map()    : 원하는 필드만 뽑아내거나 특정 형태로 변환
  * peek()   : 연산과 연 사이에 바르게 처리되었는지 체크
  */
-@Slf4j
 public class Test55 {
     public static void main(String[] args) {
         // File 객체를 가지고 있는 Stream<File> 생성

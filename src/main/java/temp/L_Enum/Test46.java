@@ -1,13 +1,10 @@
 package temp.L_Enum;
 
-import lombok.extern.slf4j.Slf4j;
-
 /**
  * Enum2
  * Enum 멤버 추가
  */
 
-@Slf4j
 public class Test46 {
     public static void main(String[] arg) {
         for(Direction2 d : Direction2.values()) {
@@ -21,9 +18,9 @@ public class Test46 {
         System.out.printf("d2 = %s, %d%n", d2.name(), d2.getValue());
 
         System.out.println("Direction.EAST.rotate(1) === "+Direction2.EAST.rotate(1));
-        log.debug("Direction.EAST.rotate(2) === "+Direction2.EAST.rotate(2));
-        log.debug("Direction.EAST.rotate(-1) === "+Direction2.EAST.rotate(-1));
-        log.debug("Direction.EAST.rotate(-2) === "+Direction2.EAST.rotate(-2));
+        System.out.println("Direction.EAST.rotate(2) === "+Direction2.EAST.rotate(2));
+        System.out.println("Direction.EAST.rotate(-1) === "+Direction2.EAST.rotate(-1));
+        System.out.println("Direction.EAST.rotate(-2) === "+Direction2.EAST.rotate(-2));
     }
 }
 

@@ -1,7 +1,5 @@
 package temp.J_Thread;
 
-import lombok.extern.slf4j.Slf4j;
-
 /**
  * Control Thread
  * [ join ] -> 다른 Thread 의 작업에 대기
@@ -9,7 +7,6 @@ import lombok.extern.slf4j.Slf4j;
  * sleep() 과 비슷하며, interrupt() 에 의해 대기상태에서 벗어날 수 있다 
  * sleep() 과의 차이는, join() 은 현재 Thread 가 아닌 특정 Thread 에 대해 동작하므로 static 메소드가 아니다
  */
-@Slf4j
 public class Test33 {
     static long startTime   = 0;
 
@@ -31,7 +28,7 @@ public class Test33 {
             t2.join();  // main 쓰레드가 t2의 작업이 끝날 때까지 기다린다
         } catch (InterruptedException e) {}
 
-        log.debug("소요시간 === " + (System.currentTimeMillis() - Test33.startTime));
+        System.out.println("소요시간 === " + (System.currentTimeMillis() - Test33.startTime));
     }
 }
 

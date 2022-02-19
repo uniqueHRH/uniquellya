@@ -1,6 +1,4 @@
-package temp.P_IO;
-
-import lombok.extern.slf4j.Slf4j;
+package temp.P_IO.A_byte;
 
 import java.io.DataOutputStream;
 import java.io.FileOutputStream;
@@ -15,7 +13,6 @@ import java.io.IOException;
  * SequenceInputStream
  * PrintStream
  */
-@Slf4j
 public class Test69 {
     public static void main(String[] args) {
         /**

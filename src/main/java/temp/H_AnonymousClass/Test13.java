@@ -1,4 +1,4 @@
-package temp.H.AnonymousClass;
+package temp.H_AnonymousClass;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;

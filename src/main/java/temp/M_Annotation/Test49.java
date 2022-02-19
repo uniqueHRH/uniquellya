@@ -1,7 +1,5 @@
 package temp.M_Annotation;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.lang.annotation.Annotation;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -9,7 +7,6 @@ import java.lang.annotation.RetentionPolicy;
 /**
  * Annotation
  */
-@Slf4j
 @Deprecated                 // 더이상 사용하지 않는 메소드나 필드에 사용
 @SuppressWarnings("1111")   // 유효하지 않은 어노테이션은 무시
 @TestInfo(testedBy="aaa", testDate=@DateTime(yymmdd="160101", hhmmss="235959"))

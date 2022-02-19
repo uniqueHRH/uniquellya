@@ -1,14 +1,11 @@
 package temp.J_Thread;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Iterator;
 import java.util.Map;
 
 /**
  * Deamon Thread2
  */
-@Slf4j
 public class Test26 {
     public static void main(String[] args) {
         Test26_1 t1 = new Test26_1("Thread1");
@@ -31,7 +28,6 @@ class Test26_1 extends Thread {
     }
 }
 
-@Slf4j
 class Test26_2 extends Thread {
     Test26_2(String name) {
         super(name);

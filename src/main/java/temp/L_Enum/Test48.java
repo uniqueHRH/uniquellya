@@ -1,11 +1,9 @@
 package temp.L_Enum;
 
-import lombok.extern.slf4j.Slf4j;
 
 /**
  * Enum4
  */
-@Slf4j
 public class Test48 {
     public static void main(String[] args) {
         MyTransportation t1 = MyTransportation.BUS;

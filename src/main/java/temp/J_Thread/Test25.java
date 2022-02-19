@@ -1,7 +1,5 @@
 package temp.J_Thread;
 
-import lombok.extern.slf4j.Slf4j;
-
 /**
  * Demon Thread
  * 무한 루프와 조건문을 이요해 실행 후,
@@ -10,7 +8,6 @@ import lombok.extern.slf4j.Slf4j;
  * setDaemon(true) 를 호출하기만 하면 된다
  * .start() 전에 호출해야 한다 -> IllegalThreadStateException 발생
  */
-@Slf4j
 public class Test25 implements Runnable {
     static boolean autoSave = false;
 

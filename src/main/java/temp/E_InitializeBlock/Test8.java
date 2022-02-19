@@ -1,11 +1,8 @@
 package temp.E_InitializeBlock;
 
-import lombok.extern.slf4j.Slf4j;
-
 /**
  * 초기화블럭
  */
-@Slf4j
 public class Test8 {
 
     static {

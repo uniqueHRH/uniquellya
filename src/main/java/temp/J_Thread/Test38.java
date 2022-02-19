@@ -1,7 +1,5 @@
 package temp.J_Thread;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 
 /**
@@ -15,7 +13,6 @@ import java.util.ArrayList;
  *
  * => Test39 에서 Lock & condition 적용 예제 확인
  */
-@Slf4j
 public class Test38 {
     public static void main(String[] args) throws InterruptedException {
         Table3 table = new Table3();
@@ -29,7 +26,6 @@ public class Test38 {
     }
 }
 
-@Slf4j
 class Table3 {
     String[] dishNames  = { "donut", "donut", "burger"};
     final int MAX_FOOD  = 6;
@@ -71,7 +67,7 @@ class Table3 {
                     }
                 }
                 try {
-                    log.debug(name + "is waiting");
+                    System.out.println(name + "is waiting");
                     wait(); // 원하는 음식이 없는 Cust Thread 를 대기시킨다
                     Thread.sleep(500);
                 } catch(InterruptedException e) {}
@@ -81,7 +77,6 @@ class Table3 {
     public int dishNum() { return dishNames.length; }
 }
 
-@Slf4j
 class Customer3 implements Runnable {
     private Table3  table;
     private String  food;
@@ -100,12 +95,11 @@ class Customer3 implements Runnable {
             String name = Thread.currentThread().getName();
 
             table.remove(food);
-            log.debug(name + " ate a " + food);
+            System.out.println(name + " ate a " + food);
         }
     }
 }
 
-@Slf4j
 class Cook3 implements Runnable {
     private Table3  table;
 

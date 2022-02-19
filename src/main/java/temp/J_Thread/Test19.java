@@ -6,7 +6,6 @@ import lombok.extern.slf4j.Slf4j;
  * Threa
  * 싱글 쓰레드 수행 시간
  */
-@Slf4j
 public class Test19 {
     public static void main(String[] args) {
         long startTime  = System.currentTimeMillis();

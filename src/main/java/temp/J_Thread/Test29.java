@@ -1,7 +1,5 @@
 package temp.J_Thread;
 
-import lombok.extern.slf4j.Slf4j;
-
 /**
  * Control Thread
  * [ suspend / resume / stop ] -> Thread 중지와 종료
@@ -12,7 +10,6 @@ import lombok.extern.slf4j.Slf4j;
  * suspend() 와 stop() 이 교착상태(deadlock)를 일으키기 쉽기 때문에 사용은 권장하지 않는다 -> API 문서에서 'deprecated' 로 기재
  * -> 이 예제는 간단하기 때문에 문제없이 동작한다
  */
-@Slf4j
 public class Test29 {
     public static void main(String[] args) {
         RunnableImpl runnable   = new RunnableImpl();
@@ -40,7 +37,6 @@ public class Test29 {
     }
 }
 
-@Slf4j
 class RunnableImpl implements Runnable {
     @Override
     public void run() {

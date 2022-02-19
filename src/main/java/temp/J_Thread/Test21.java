@@ -1,7 +1,5 @@
 package temp.J_Thread;
 
-import lombok.extern.slf4j.Slf4j;
-
 import javax.swing.*;
 
 /**
@@ -14,7 +12,6 @@ import javax.swing.*;
  *
  * 유저가 입력을 끝내기 전까지 for문은 동작하지 않는다
  */
-@Slf4j
 public class Test21 {
     public static void main(String[] args) throws InterruptedException {
         String input    = JOptionPane.showInputDialog("아무값이나 입력하세요");

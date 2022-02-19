@@ -1,18 +1,15 @@
 package temp.L_Enum;
 
-import lombok.extern.slf4j.Slf4j;
-
 /**
  * Enum3
  * 추상메소드 추가
  */
-@Slf4j
 public class Test47 {
     public static void main(String[] args) {
         System.out.println("bus fare ======== " + Transportation.BUS.fare(100));
         System.out.println("train fare ====== " + Transportation.TRAIN.fare(100));
-        log.debug("ship fare ======= " + Transportation.SHIP.fare(100));
-        log.debug("airplane fare === " + Transportation.AIRPLANE.fare(100));
+        System.out.println("ship fare ======= " + Transportation.SHIP.fare(100));
+        System.out.println("airplane fare === " + Transportation.AIRPLANE.fare(100));
     }
 }
 

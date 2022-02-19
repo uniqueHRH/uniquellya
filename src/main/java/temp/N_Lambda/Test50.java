@@ -1,8 +1,5 @@
 package temp.N_Lambda;
 
-import lombok.extern.slf4j.Slf4j;
-
-
 /**
  * Lambda
  * Basic
@@ -12,7 +9,6 @@ interface MyFunction {
     void run(); // public abstract void run();
 }
 
-@Slf4j
 public class Test50 {
     static void execute(MyFunction f) { // 매개변수의 타입이 MyFunction 인 메소드
         f.run();

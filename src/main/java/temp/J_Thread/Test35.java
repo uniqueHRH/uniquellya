@@ -1,7 +1,5 @@
 package temp.J_Thread;
 
-import lombok.extern.slf4j.Slf4j;
-
 /**
  * Control Thread
  * Synchronized
@@ -44,7 +42,6 @@ class Account {
     }
 }
 
-@Slf4j
 class Test35Runnable implements Runnable {
     Account acc = new Account();
 
@@ -54,7 +51,7 @@ class Test35Runnable implements Runnable {
             // 100, 200, 300 중 한 값을 임의로 선택하여 출금 (withdraw)
             int money   = (int)(Math.random() * 3 + 1) * 100;
             acc.withdraw(money);
-            log.debug("balance === " + acc.getBalance());
+            System.out.println("balance === " + acc.getBalance());
         }
     }
 }

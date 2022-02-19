@@ -1,12 +1,9 @@
 package temp.J_Thread;
 
-import lombok.extern.slf4j.Slf4j;
-
 /**
- * Threa
+ * Thread
  * 싱글 쓰레드 수행 시간
  */
-@Slf4j
 public class Test20 {
     static long startTime   = 0;
 
@@ -21,7 +18,6 @@ public class Test20 {
     }
 }
 
-@Slf4j
 class ThreadEx5_1 extends Thread {
     public void run() {
         for(int i=0; i<300; i++) System.out.printf("%s", new String("|"));

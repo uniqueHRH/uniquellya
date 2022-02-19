@@ -1,7 +1,5 @@
 package temp.O_Stream;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Arrays;
 import java.util.stream.Stream;
 
@@ -9,7 +7,6 @@ import java.util.stream.Stream;
  * Stream
  * 중간연산 - [ flatMap() ]    : 배열 Stream
  */
-@Slf4j
 public class Test57 {
     public static void main(String[] args) {
         Stream<String[]> strArrStrm = Stream.of(
@@ -24,7 +21,7 @@ public class Test57 {
                 .sorted()
                 .forEach(System.out::println);
 
-        log.debug("");
+        System.out.println("");
 
         String[] lineArr    = {
                 "Believe or not It is true",
@@ -37,7 +34,7 @@ public class Test57 {
                 .sorted()
                 .forEach(System.out::println);
 
-        log.debug("");
+        System.out.println("");
 
         Stream<String> strStrm1 = Stream.of("AAA", "ABC", "bBb", "Dd");
         Stream<String> strStrm2 = Stream.of("bbb", "aaa", "ccc", "dd");

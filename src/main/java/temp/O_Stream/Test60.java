@@ -1,7 +1,5 @@
 package temp.O_Stream;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -17,7 +15,6 @@ import static java.util.stream.Collectors.*;
  * 리듀싱             : reducing()
  * 문자열 결합         : joinging()
  */
-@Slf4j
 public class Test60 {
     public static void main(String[] args) {
         Student3[] stuArr    = {
@@ -32,45 +29,45 @@ public class Test60 {
         // 학생 이름만 List<String> 에 저장
         List<String> names  = Stream.of(stuArr).map(Student3::getName)
                                             .collect(Collectors.toList());
-        log.debug("name === " + names);
-        log.debug("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
+        System.out.println("name === " + names);
+        System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
 
         // Stream to Array
         Student3[] stuArr2   = Stream.of(stuArr).toArray(Student3[]::new);
-        for(Student3 s : stuArr2) log.debug("stuArr2 === " + s);
-        log.debug("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
+        for(Student3 s : stuArr2) System.out.println("stuArr2 === " + s);
+        System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
 
         // Stream 을 Map<String, Student> 로 변환 . key = 학생이름
         Map<String, Student3> stuMap    = Stream.of(stuArr)
                                             .collect(Collectors.toMap(s -> s.getName(), p -> p));
         for(String name : stuMap.keySet())
-            log.debug(name + " - " + stuMap.get(name));
-        log.debug("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
+            System.out.println(name + " - " + stuMap.get(name));
+        System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
 
         long count      = Stream.of(stuArr).collect(counting());
         long totalScore = Stream.of(stuArr)
                                 .collect(summingInt(Student3::getTotalScore));
-        log.debug("count === " + count);
-        log.debug("totalScore === " + totalScore);
-        log.debug("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
+        System.out.println("count === " + count);
+        System.out.println("totalScore === " + totalScore);
+        System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
 
         totalScore  = Stream.of(stuArr)
                         .collect(reducing(0, Student3::getTotalScore, Integer::sum));
-        log.debug("totalScore === " + totalScore);
-        log.debug("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
+        System.out.println("totalScore === " + totalScore);
+        System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
 
         Optional<Student3> topStudent   = Stream.of(stuArr)
                                             .collect(maxBy(Comparator.comparingInt(Student3::getTotalScore)));
-        log.debug("topStudent === " + topStudent.get());
-        log.debug("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
+        System.out.println("topStudent === " + topStudent.get());
+        System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
 
         IntSummaryStatistics stat   = Stream.of(stuArr)
                                         .collect(summarizingInt(Student3::getTotalScore));
-        log.debug("stat === " + stat);
-        log.debug("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
+        System.out.println("stat === " + stat);
+        System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
         String stuNames = Stream.of(stuArr).map(Student3::getName)
                         .collect(joining(", ", "{", "}"));
-        log.debug(stuNames);
+        System.out.println(stuNames);
     }
 }
 

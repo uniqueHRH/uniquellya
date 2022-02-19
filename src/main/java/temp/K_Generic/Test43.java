@@ -1,7 +1,5 @@
 package temp.K_Generic;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 
 /**
@@ -12,7 +10,6 @@ import java.util.ArrayList;
  * <? super T>      // T와 그 조상만 가능
  * <?>              // All. <? extends Object> 와 동일
  */
-@Slf4j
 public class Test43 {
     public static void main(String[] args) {
         FruitBox2<Fruit2> fruitBox  = new FruitBox2<Fruit2>();

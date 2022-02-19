@@ -1,7 +1,5 @@
 package temp.J_Thread;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveTask;
 
@@ -14,7 +12,6 @@ import java.util.concurrent.RecursiveTask;
  * -> 작업을 나누고 다시 합치는데 걸리는 시간이 있기 때문이다
  * -> 테스트해보고 이득이 있을 때에만, multi-Thread 를 사용하도록 하자
  */
-@Slf4j
 public class Test40 {
     static final ForkJoinPool pool  = new ForkJoinPool();   // Thread pool 생성
 

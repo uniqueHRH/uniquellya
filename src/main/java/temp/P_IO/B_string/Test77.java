@@ -1,6 +1,4 @@
-package temp.P_IO;
-
-import lombok.extern.slf4j.Slf4j;
+package temp.P_IO.B_string;
 
 import java.io.FileInputStream;
 import java.io.FileReader;
@@ -22,7 +20,6 @@ import java.io.IOException;
  * pipedReader  & pipedWriter
  * StringReade  & StringWriter
  */
-@Slf4j
 public class Test77 {
     public static void main(String[] args) {
         try {

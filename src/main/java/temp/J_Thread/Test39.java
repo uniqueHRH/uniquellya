@@ -1,7 +1,5 @@
 package temp.J_Thread;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
@@ -15,7 +13,6 @@ import java.util.concurrent.locks.ReentrantLock;
  * Thread 의 종류에 따라 구분할 수 있지만, 특정 Thread 에 지정할 수는 없다
  * 음식별로 Condition 을 세분화하면, 통지를 받고도 원하는 음식이 없어서 다시 기다리는 일이 없도록 가능하다
  */
-@Slf4j
 public class Test39 {
     public static void main(String[] args) throws InterruptedException {
         Table4 table = new Table4();
@@ -29,7 +26,6 @@ public class Test39 {
     }
 }
 
-@Slf4j
 class Table4 {
     String[] dishNames  = { "donut", "donut", "burger"};
     final int MAX_FOOD  = 6;
@@ -94,7 +90,6 @@ class Table4 {
     public int dishNum() { return dishNames.length; }
 }
 
-@Slf4j
 class Customer4 implements Runnable {
     private Table4  table;
     private String  food;
@@ -118,7 +113,6 @@ class Customer4 implements Runnable {
     }
 }
 
-@Slf4j
 class Cook4 implements Runnable {
     private Table4  table;
 

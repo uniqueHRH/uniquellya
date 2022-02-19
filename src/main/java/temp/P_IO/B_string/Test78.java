@@ -1,6 +1,4 @@
-package temp.P_IO;
-
-import lombok.extern.slf4j.Slf4j;
+package temp.P_IO.B_string;
 
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -14,7 +12,6 @@ import java.io.IOException;
  * pipedReader  & pipedWriter
  * StringReade  & StringWriter
  */
-@Slf4j
 public class Test78 {
     /**
      * 파일의 공백을 모두 없앤다

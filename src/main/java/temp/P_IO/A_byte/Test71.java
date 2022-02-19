@@ -1,6 +1,4 @@
-package temp.P_IO;
-
-import lombok.extern.slf4j.Slf4j;
+package temp.P_IO.A_byte;
 
 import java.io.DataInputStream;
 import java.io.FileInputStream;
@@ -17,16 +15,15 @@ import java.io.IOException;
  * SequenceInputStream
  * PrintStream
  */
-@Slf4j
 public class Test71 {
     public static void main(String[] args) {
         try {
             FileInputStream fis = new FileInputStream("Test69.bat");
             DataInputStream dis = new DataInputStream(fis);
 
-            log.debug("dis.readInt ======= " + dis.readInt());
-            log.debug("dis.readFloat ===== " + dis.readFloat());
-            log.debug("dis.readBoolean === " + dis.readBoolean());
+            System.out.println("dis.readInt ======= " + dis.readInt());
+            System.out.println("dis.readFloat ===== " + dis.readFloat());
+            System.out.println("dis.readBoolean === " + dis.readBoolean());
         } catch (IOException e) {
             e.printStackTrace();
         }

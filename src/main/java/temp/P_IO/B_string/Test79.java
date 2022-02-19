@@ -1,6 +1,4 @@
-package temp.P_IO;
-
-import lombok.extern.slf4j.Slf4j;
+package temp.P_IO.B_string;
 
 import java.io.IOException;
 import java.io.PipedReader;
@@ -20,7 +18,6 @@ import java.io.StringWriter;
  * -> Thread 를 시작하기 전 PipedReader 와 PipedWriter 를 연결해야 함
  * StringReade      & StringWriter
  */
-@Slf4j
 public class Test79 {
     public static void main(String[] args) {
         InputThread     inThread    = new InputThread("InputThread");
@@ -34,7 +31,6 @@ public class Test79 {
     }
 }
 
-@Slf4j
 class InputThread extends Thread {
     PipedReader     input   = new PipedReader();
     StringWriter    sw      = new StringWriter();
@@ -49,7 +45,7 @@ class InputThread extends Thread {
             while((data = input.read()) != -1) {
                 sw.write(data);
             }
-            log.debug(getName() + " received : " + sw.toString());
+            System.out.println(getName() + " received : " + sw.toString());
         } catch (IOException e) {}
     }
     public PipedReader getInput() {
@@ -62,7 +58,6 @@ class InputThread extends Thread {
     }
 }
 
-@Slf4j
 class OutputThread extends Thread {
     PipedWriter output  = new PipedWriter();
 
@@ -72,7 +67,7 @@ class OutputThread extends Thread {
     public void run() {
         try {
             String msg  = "Hello";
-            log.debug(getName() + " send : " + msg);
+            System.out.println(getName() + " send : " + msg);
             output.write(msg);
             output.close();
         } catch (IOException e) {}

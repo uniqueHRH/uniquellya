@@ -1,8 +1,5 @@
 package temp.A_Basic;
 
-import lombok.extern.slf4j.Slf4j;
-
-@Slf4j
 public class Test4 {
     int x;
 

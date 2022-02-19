@@ -1,7 +1,5 @@
 package temp.J_Thread;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 
 /**
@@ -15,7 +13,6 @@ import java.util.ArrayList;
  * => 여러 Thread 가 테이블을 공유하는데도 동기화를 하지 않았기 때문
  * => Test37 에서 동기화 적용 예제 확인
  */
-@Slf4j
 public class Test36 {
     public static void main(String[] args) throws InterruptedException {
         Table table = new Table();
@@ -29,7 +26,6 @@ public class Test36 {
     }
 }
 
-@Slf4j
 class Customer implements Runnable {
     private Table   table;
     private String  food;
@@ -46,14 +42,13 @@ class Customer implements Runnable {
                 Thread.sleep(10);
             } catch (InterruptedException e) {}
             String name = Thread.currentThread().getName();
-            if(eatFood()) log.debug(name + " ate a " + food);
-            else log.debug(name + " failed to eat...");
+            if(eatFood()) System.out.println(name + " ate a " + food);
+            else System.out.println(name + " failed to eat...");
         }
     }
     boolean eatFood() { return table.remove(food); }
 }
 
-@Slf4j
 class Cook implements Runnable {
     private Table   table;
 
@@ -75,7 +70,6 @@ class Cook implements Runnable {
     }
 }
 
-@Slf4j
 class Table {
     String[] dishNames  = {"donut", "donut", "burger"}; // donut 이 더 자주 나온다
     final int MAX_FOOD  = 6;                            // 최대 음식의 갯수는 6
@@ -86,7 +80,7 @@ class Table {
         // 테이블에 음식이 가득차면, 더 음식을 추가하지 않는다
         if(dishes.size() >= MAX_FOOD) return;
         dishes.add(dish);
-        log.debug("Dished === " + dishes.toString());
+        System.out.println("Dished === " + dishes.toString());
     }
 
     public boolean remove(String dishName) {

@@ -1,6 +1,4 @@
-package temp.P_IO;
-
-import lombok.extern.slf4j.Slf4j;
+package temp.P_IO.B_string;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -16,7 +14,6 @@ import java.io.IOException;
  * -> bufferedWriter    -> newLine()  : 줄바꿈
  * inputStreamReader    & &outputStreamWriter
  */
-@Slf4j
 public class Test81 {
     public static void main(String[] args) {
         try {
@@ -27,7 +24,7 @@ public class Test81 {
 
             for(int i=1; (line = br.readLine()) != null; i++) {
                 // ";" 를 포함한 라인 출력
-                if(line.indexOf(";") != -1) log.debug(i + " === " + line);
+                if(line.indexOf(";") != -1) System.out.println(i + " === " + line);
             }
             br.close();
         } catch (IOException e) {}

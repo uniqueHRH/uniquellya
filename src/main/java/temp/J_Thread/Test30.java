@@ -1,7 +1,5 @@
 package temp.J_Thread;
 
-import lombok.extern.slf4j.Slf4j;
-
 /**
  * Control Thread
  * [ suspend / resume / stop ] -> Thread 중지와 종료
@@ -12,7 +10,6 @@ import lombok.extern.slf4j.Slf4j;
  * suspend() 와 stop() 이 교착상태(deadlock)를 일으키기 쉽기 때문에 사용은 권장하지 않는다 -> API 문서에서 'deprecated' 로 기재
  * Test31 에서 보다 간략한 코드로 작성 -> 비교
  */
-@Slf4j
 public class Test30 {
     /**
      * 각 Thread 가 다른 실행상태를 가져야 하므로,
@@ -47,7 +44,6 @@ public class Test30 {
     }
 }
 
-@Slf4j
 class RunnableImpl2 implements Runnable {
     boolean suspended   = false;
     boolean stopped     = false;

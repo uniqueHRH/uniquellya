@@ -1,6 +1,4 @@
-package temp.P_IO;
-
-import lombok.extern.slf4j.Slf4j;
+package temp.P_IO.A_byte;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -12,10 +10,9 @@ import java.util.Arrays;
  * [바이트기반 Stream ]
  * FileInputStream & FileOutputStrea
  */
-@Slf4j
 public class Test67 {
     public static void main(String args[]) throws IOException {
-        log.debug("arg === " + Arrays.toString(args));
+        System.out.println("arg === " + Arrays.toString(args));
 
         try {
             FileInputStream fis = new FileInputStream(args[0]);
